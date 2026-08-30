@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="C Code Lab - Learn C Programming from Zero to Advanced">
+
+    <title>C Code Lab | Learn C Programming</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <span>&lt;/&gt;</span>
+        C CODE LAB
+    </a>
+
+    <nav class="navbar">
+
+        <a href="#roadmap">Roadmap</a>
+
+        <a href="#practice">Practice</a>
+
+        <a href="#quiz">Quiz</a>
+
+        <a href="#projects">Projects</a>
+
+    </nav>
+
+    <button
+        id="themeBtn"
+        class="theme-btn"
+        aria-label="Toggle theme">
+        ☾
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            C PROGRAMMING • ZERO → ADVANCED
+        </p>
+
+        <h1>
+            Master C Programming
+            <span>One Concept at a Time.</span>
+        </h1>
+
+        <p class="hero-description">
+
+            Learn C programming from the fundamentals
+            to advanced concepts with theory, examples,
+            practice problems and projects.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                class="btn btn-primary"
+                onclick="startLearning()">
+
+                Start Learning →
+
+            </button>
+
+
+            <button
+                class="btn btn-secondary"
+                onclick="openPractice()">
+
+                Practice Lab
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CODE CARD -->
+
+    <div class="hero-code">
+
+        <div class="code-header">
+
+            <div class="window-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <small>main.c</small>
+
+        </div>
+
+
+        <pre><code>
+<span class="purple">#include</span> &lt;stdio.h&gt;
+
+<span class="blue">int</span> main() {
+
+    printf(<span class="yellow">"Hello, C!"</span>);
+
+    <span class="blue">return</span> 0;
+}
+        </code></pre>
+
+
+        <div class="code-output">
+
+            <span>▶</span>
+            Hello, C!
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <strong>14</strong>
+
+        <span>Modules</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>120+</strong>
+
+        <span>Lessons</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>300+</strong>
+
+        <span>Practice</span>
+
+    </div>
+
+
+    <div class="stat">
+
+        <strong>500+</strong>
+
+        <span>Questions</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ROADMAP ================= -->
+
+<section
+    id="roadmap"
+    class="section roadmap-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                YOUR LEARNING PATH
+            </p>
+
+            <h2>C Programming Roadmap</h2>
+
+            <p>
+                Follow the roadmap from beginner
+                to advanced C programming.
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search topics...">
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="roadmapContainer"
+        class="roadmap-container">
+
+        <!-- JavaScript will insert roadmap -->
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROGRESS ================= -->
+
+<section class="section progress-section">
+
+    <div class="progress-card">
+
+        <div class="progress-top">
+
+            <div>
+
+                <p class="eyebrow">
+                    YOUR PROGRESS
+                </p>
+
+                <h2>Keep Learning 🚀</h2>
+
+            </div>
+
+
+            <strong id="progressPercent">
+                0%
+            </strong>
+
+        </div>
+
+
+        <div class="progress-bar">
+
+            <div
+                id="progressBar"
+                class="progress-fill">
+
+            </div>
+
+        </div>
+
+
+        <p id="progressText">
+            0 lessons completed
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRACTICE ================= -->
+
+<section
+    id="practice"
+    class="section practice-section">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                PRACTICE LAB
+            </p>
+
+            <h2>Think. Code. Repeat.</h2>
+
+            <p>
+                Practice C programming with simple
+                coding challenges.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="practice-grid">
+
+
+        <!-- PROBLEM -->
+
+        <div class="problem-card">
+
+            <span class="difficulty">
+                BEGINNER
+            </span>
+
+            <h3>
+                Print a Number
+            </h3>
+
+            <p>
+
+                Create an integer variable named
+                <code>number</code>, store
+                <strong>25</strong> in it and print
+                the value.
+
+            </p>
+
+
+            <button
+                class="btn btn-secondary"
+                onclick="showSolution()">
+
+                Show Solution
+
+            </button>
+
+
+            <pre
+                id="solution"
+                class="solution hidden"></pre>
+
+        </div>
+
+
+
+        <!-- EDITOR -->
+
+        <div class="editor-card">
+
+            <div class="editor-header">
+
+                <span>
+                    practice.c
+                </span>
+
+                <button
+                    onclick="runCode()">
+
+                    ▶ Run
+
+                </button>
+
+            </div>
+
+
+            <textarea
+                id="codeEditor"
+                spellcheck="false">
+
+#include <stdio.h>
+
+int main() {
+
+    int number = 25;
+
+    printf("%d", number);
+
+    return 0;
+}
+
+            </textarea>
+
+
+            <div class="output-panel">
+
+                <small>
+                    OUTPUT
+                </small>
+
+                <pre id="output">
+Ready. Press Run.
+                </pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= QUIZ ================= -->
+
+<section
+    id="quiz"
+    class="section quiz-section">
+
+
+    <div class="section-heading center">
+
+        <p class="eyebrow">
+            QUICK CHECK
+        </p>
+
+        <h2>
+            Test Your C Knowledge
+        </h2>
+
+    </div>
+
+
+    <div class="quiz-card">
+
+        <p
+            id="questionNumber"
+            class="question-number">
+
+            Question 1 / 5
+
+        </p>
+
+
+        <h3 id="question">
+
+            Which function is the entry
+            point of a C program?
+
+        </h3>
+
+
+        <div id="options">
+
+            <!-- JS -->
+
+        </div>
+
+
+        <div class="quiz-bottom">
+
+            <span id="quizResult"></span>
+
+            <button
+                id="nextQuestion"
+                class="btn btn-primary"
+                disabled>
+
+                Next →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section
+    id="projects"
+    class="section projects-section">
+
+
+    <div class="section-heading center">
+
+        <p class="eyebrow">
+            BUILD SOMETHING
+        </p>
+
+        <h2>
+            C Programming Projects
+        </h2>
+
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <div class="project-card">
+
+            <span>01</span>
+
+            <h3>
+                Calculator
+            </h3>
+
+            <p>
+                Build a simple command-line calculator.
+            </p>
+
+            <button>
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <span>02</span>
+
+            <h3>
+                Number Guessing Game
+            </h3>
+
+            <p>
+                Create a random number guessing game.
+            </p>
+
+            <button>
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <span>03</span>
+
+            <h3>
+                Student Management
+            </h3>
+
+            <p>
+                Manage student records using C.
+            </p>
+
+            <button>
+                Coming Soon
+            </button>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <span>04</span>
+
+            <h3>
+                Bank Management
+            </h3>
+
+            <p>
+                Build a file-based bank system.
+            </p>
+
+            <button>
+                Coming Soon
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div>
+
+        <strong>
+            &lt;/&gt; C CODE LAB
+        </strong>
+
+        <p>
+            Learn C. Practice C. Build with C.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        © 2026 C Code Lab
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= LESSON MODAL ================= -->
+
+<div
+    id="lessonModal"
+    class="modal hidden">
+
+    <div class="modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeLesson()">
+
+            ×
+
+        </button>
+
+
+        <p
+            id="modalModule"
+            class="eyebrow">
+
+        </p>
+
+
+        <h2 id="modalTitle">
+
+        </h2>
+
+
+        <div id="modalBody">
+
+        </div>
+
+
+        <button
+            class="btn btn-primary"
+            onclick="completeCurrentLesson()">
+
+            ✓ Mark as Complete
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<script src="js/roadmap.js"></script>
+<script src="js/lessons.js"></script>
+<script src="js/practice.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/search.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
