@@ -1,0 +1,99 @@
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 70px 6%;
+    }
+
+    .stats {
+        padding: 25px 6%;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .practice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .roadmap-item {
+        grid-template-columns:
+            40px
+            1fr
+            20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
